@@ -155,6 +155,47 @@ body {
     transition: all .3s ease 0s;
 }
 
+.square__first {
+    background-color: #A1D7D0;
+    max-width: 900px;
+    position: absolute;
+    top: 0;
+    right: -272px;
+    border-radius: 184px;
+    z-index: 4;
+    min-height: 900px;
+    width: 100%;
+    transform: rotate(45deg);
+}
+
+.square__second {
+    background-color: #D7D8DC;
+    max-width: 900px;
+    z-index: 3;
+    position: absolute;
+    top: 205px;
+    right: -294px;
+    border-radius: 184px;
+    z-index: 3;
+    min-height: 900px;
+    width: 100%;
+    transform: rotate(45deg);
+}
+
+.square__third {
+    background-color: #7D9995;
+    max-width: 900px;
+    z-index: 4;
+    position: absolute;
+    top: 218px;
+    right: -403px;
+    border-radius: 184px;
+    z-index: 4;
+    min-height: 900px;
+    width: 100%;
+    transform: rotate(45deg);
+}
+
 .header {
     position: fixed;
     display: flex;
@@ -162,13 +203,38 @@ body {
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 50;
+    z-index: 8;
     padding: 0 106px;
     height: 116px;
 }
 
+.header._active {
+    background-color: #fff;
+}
+
 .logo {
     margin-right: 102px;
+}
+
+.logo:hover svg path {
+    transition: .6s all;
+}
+
+.logo:hover svg path:nth-child(2) {
+    fill: rgb(125, 153, 149);
+}
+
+.logo:hover svg path:nth-child(3) {
+    fill: #fff;
+}
+
+.logo:hover {
+    transition: .6s all;
+}
+
+.logo:hover span {
+    transition: .6s all;
+    color: #5d706e;
 }
 
 .logo a {
@@ -231,10 +297,23 @@ a.menu__link._active {
     cursor: pointer;
 }
 
+.sign__in:hover span {
+    color: #516462;
+}
+
+.sign__in:hover svg ellipse {
+    fill: #516462;
+}
+
+.sign__in svg ellipse {
+    transition: .3s all;
+}
+
 .sign__in span {
     font-size: 20px;
     color: #6E8582;
     margin-left: 14px;
+    transition: .3s all;
 }
 
 .page {
@@ -287,6 +366,7 @@ a.menu__link._active {
     top: 0;
     left: 0;
     overflow: hidden;
+    z-index: 5;
 }
 
 .screen__image {
@@ -315,20 +395,50 @@ a.menu__link._active {
     visibility: hidden;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .page__bullet {
-    width: 15px;
-    height: 15px;
+    width: 17px;
+    height: 17px;
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #fff;
     margin: 10px 0;
     border-radius: 50%;
-    transition: background-color 0.3 ease 0s;
+    transition: 0.3s all ease 0s;
 }
 
 .page__bullet_active {
     background-color: #fff;
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+.page__bullet_active::after {
+    content: '';
+    position: absolute;
+    top: 24%;
+    right: 16%;
+    background-image: url('../img/bullet-button.svg');
+    width: 17px;
+    height: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: 0.3s all;
+    animation: fadeIn 1.4s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
 }
 
 .page__scroll {
@@ -357,12 +467,12 @@ a.menu__link._active {
 }
 
 .screen__text-title {
-    font-size: 36px;
-    color: #fff;
-    padding: 14px;
+    font-size: 48px;
+    color: #4A5E5B;
     margin-bottom: 20px;
     border-radius: 10px;
-    font-weight: 500;
+    font-weight: 700;
+    max-width: 400px;
 }
 
 .screen__text {
@@ -398,6 +508,43 @@ a.menu__link._active {
     border-radius: 10px;
     filter: saturate(0.7);
     opacity: .8;
+}
+
+.screen__content-group {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 4;
+    margin-top: 120px;
+}
+
+.content-title_btn {
+    display: flex;
+    flex-direction: column;
+    margin-right: 214px;
+}
+
+.content-title_btn button {
+    width: 306px;
+    height: 76px;
+    box-sizing: border-box;
+    margin-top: 70px;
+    border-radius: 100px;
+    background-color: #64A2AA;
+    border: none;
+    outline: none;
+    font-size: 28px;
+    color: #fff;
+    font-weight: 700;
+    transition: .4s all;
+    -webkit-box-shadow: -5px 18px 34px -5px rgba(100, 162, 170, 0.49);
+    -moz-box-shadow: -5px 18px 34px -5px rgba(100, 162, 170, 0.49);
+    box-shadow: -5px 18px 34px -5px rgba(100, 162, 170, 0.49);
+}
+
+.content-title_btn button:hover {
+    background-color: #4f838a;
+    transform: translateY(-4px);
 }
 
 @media(max-width: 1500px) {

@@ -57,10 +57,13 @@ let pageSlider = new Swiper('.page', {
 });
 
 let menuLinks = document.querySelectorAll('.menu__link');
+let header = document.querySelector('.header');
 
 function menuSlider() {
+
     if (menuLinks.length > 0) {
         menuLinks[pageSlider.realIndex].classList.add('_active');
+      
         for (let index = 0; index < menuLinks.length; index++) {
             const menuLink = menuLinks[index];
             menuLink.addEventListener('click', function (e) {
