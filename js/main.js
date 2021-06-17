@@ -1,3 +1,4 @@
+const navActive = '_active';
 let wrapper = document.querySelector('.wrapper');
 
 let pageSlider = new Swiper('.page', {
@@ -47,6 +48,7 @@ let pageSlider = new Swiper('.page', {
         },
         slideChange: function () {
             menuSliderRemove();
+            activeSlide();
             menuLinks[pageSlider.realIndex].classList.add('_active');
         },
         resize: function () {
@@ -59,13 +61,15 @@ let pageSlider = new Swiper('.page', {
 let menuLinks = document.querySelectorAll('.menu__link');
 let header = document.querySelector('.header');
 
+
 function menuSlider() {
 
     if (menuLinks.length > 0) {
         menuLinks[pageSlider.realIndex].classList.add('_active');
-      
+
         for (let index = 0; index < menuLinks.length; index++) {
             const menuLink = menuLinks[index];
+
             menuLink.addEventListener('click', function (e) {
                 menuSliderRemove();
                 pageSlider.slideTo(index, 800);
@@ -75,6 +79,17 @@ function menuSlider() {
         }
     }
 }
+
+function activeSlide() {
+    let slides = document.querySelectorAll('.screen');
+    if (pageSlider.activeIndex > 0) {
+        header.classList.add('_active');
+    } else {
+        header.classList.remove('_active');
+    }
+
+}
+
 
 function menuSliderRemove() {
     let menuLinkActive = document.querySelector('.menu__link._active');
