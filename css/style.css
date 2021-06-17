@@ -142,6 +142,11 @@ body {
     transform: translate(0px, 0px);
 }
 
+.wrapper._loaded .header-bg {
+    transition: transform .8s ease .8s;
+    transform: translate(0px, 0px);
+}
+
 .wrapper._loaded .page__pagination {
     transform: translate(0px, -50%);
     opacity: 1;
@@ -200,12 +205,25 @@ body {
     position: fixed;
     display: flex;
     align-items: center;
-    width: 100%;
-    top: 0;
+    width: 75%;
+    top: -2px;
     left: 0;
-    z-index: 8;
+    z-index: 10;
     padding: 0 106px;
     height: 116px;
+    transform: translate(0px, -80px);
+}
+
+.header-bg {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 160px;
+    background-color: #fff;
+    clip-path: ellipse(66% 100% at 31% -24%);
+    transform: translate(0px, -130px);
 }
 
 .header._active {
