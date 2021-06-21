@@ -565,6 +565,31 @@ a.menu__link._active {
     transform: translateY(-4px);
 }
 
+.services__cards {
+    position: absolute;
+    top: 156px;
+    left: 140px;
+}
+
+.services__card {
+    position: absolute;
+}
+
+.services__card:nth-child(2) {
+    top: 200px;
+    left: 300px;
+}
+
+.services__card:nth-child(3) {
+    top: 24em;
+    left: 44em;
+}
+
+.services__card:last-child {
+    left: 75em;
+    top: 25em;
+}
+
 @media(max-width: 1500px) {
     .screen__content {
         padding: 80px 30px 0;
