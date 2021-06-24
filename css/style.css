@@ -599,7 +599,7 @@ a.services__card img {
     z-index: 1;
     opacity: 0;
     transform: scale(0);
-    transition: .3s all;
+    transition: .7s all;
 }
 
 .services__card-text_first {
@@ -722,7 +722,6 @@ a.services__card img {
 
 a.services__card:hover .services__card-text {
     transform: scale(1);
-    transition-delay: 0.1s;
     opacity: 1;
 }
 
@@ -800,6 +799,140 @@ a.services__card:nth-child(2)::before {
     width: 393px;
     height: 316px;
     border-radius: 14px;
+}
+
+.schedule {
+    position: relative;
+    top: 11em;
+    left: 8em;
+    max-width: 690px;
+    min-height: 260px;
+}
+
+.schedule h3 {
+    font-weight: bold;
+    font-size: 64px;
+    color: #FFFFFF;
+    text-shadow: 7px 4px 10px rgba(0, 0, 0, 0.51);
+    margin-bottom: 30px;
+}
+
+.schedule p {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 77px;
+    color: #191F20;
+}
+
+.schedule-line {
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+}
+
+.contact-square__first {
+    top: 26em;
+    right: 1em;
+    z-index: -1;
+    transform: rotate(30deg);
+}
+
+.contact-square__second {
+    top: 38em;
+    right: 7em;
+    transform: rotate(-6deg);
+}
+
+.contact-square__third {
+    top: 24em;
+    right: -22em;
+    transform: rotate(40deg);
+
+}
+
+.screen__contact-group {
+    max-width: 1545px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    z-index: 4;
+    height: 100%;
+}
+
+.contact__map {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 77%;
+}
+
+.contact__map img {
+    margin-top: 11em;
+    max-width: 457px;
+    width: 100%;
+}
+
+.contact__map a {
+    outline: none;
+}
+
+.contact__map h4 {
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 50px;
+    color: #4A5E5B;
+}
+
+.contacts__info {
+    max-width: 770px;
+    width: 100%;
+    font-size: 48px;
+    font-weight: bold;
+    color: #4A5E5B;
+    height: 100%;
+    margin-top: 10em;
+}
+
+.contacts__info h3 {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 30px;
+}
+
+.contacts__info h3 img {
+    margin-left: 20px;
+}
+
+.contacts__info p span:last-child {
+    opacity: .8;
+}
+
+.contacts__info p span {
+    margin-right: 30px;
+}
+
+.contacts__info p {
+    display: flex;
+    margin-bottom: 34px;
+}
+
+.contacts__info p span:first-child {
+    display: flex;
+    align-items: baseline;
+}
+
+.contacts__info p span img {
+    margin-right: 10px;
+}
+
+.contacts__line {
+    width: 100%;
+    height: 3px;
+    background-color: #303F3D;
 }
 
 @media(max-width: 1500px) {
