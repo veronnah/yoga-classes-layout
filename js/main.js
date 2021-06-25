@@ -1,4 +1,3 @@
-const navActive = '_active';
 let wrapper = document.querySelector('.wrapper');
 
 let pageSlider = new Swiper('.page', {
@@ -58,17 +57,12 @@ let pageSlider = new Swiper('.page', {
 });
 
 let menuLinks = document.querySelectorAll('.menu__link');
-let header = document.querySelector('.header');
-
 
 function menuSlider() {
-
     if (menuLinks.length > 0) {
         menuLinks[pageSlider.realIndex].classList.add('_active');
-
         for (let index = 0; index < menuLinks.length; index++) {
             const menuLink = menuLinks[index];
-
             menuLink.addEventListener('click', function (e) {
                 menuSliderRemove();
                 pageSlider.slideTo(index, 800);
@@ -94,16 +88,12 @@ function setScrollType() {
     for (let index = 0; index < pageSlider.slides.length; index++) {
         const pageSlide = pageSlider.slides[index];
         const pageSlideContent = pageSlide.querySelector('.screen__content');
-        if (pageSlideContent) {
-            const pageSlideContentHeight = pageSlideContent.offsetHeight;
-            if (pageSlideContentHeight > window.innerHeight) {
-                wrapper.classList.add('_free');
-                pageSlider.params.freeMode = true;
-                break;
-            }
+        if (window.innerHeight < 766 || window.innerWidth < 1280) {
+            wrapper.classList.add('_free');
+            pageSlider.params.freeMode = true;
+            break;
         }
     }
 }
-
 
 pageSlider.init();
