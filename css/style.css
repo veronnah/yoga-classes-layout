@@ -951,6 +951,10 @@ a.services__card:nth-child(2)::before {
     .screen__content-group img {
         max-width: 900px;
     }
+
+    .header-bg {
+        width: 86%;
+    }
 }
 
 @media(max-width: 1650px) {
@@ -988,6 +992,43 @@ a.services__card:nth-child(2)::before {
 
     .screen__text {
         padding-top: 30px;
+    }
+}
+
+@media(max-width: 1460px) {
+    .content-title_btn {
+        margin-right: 66px;
+    }
+
+    .screen__content-group {
+        margin-top: 146px;
+    }
+
+    .screen__content-group img {
+        max-width: 730px;
+    }
+
+    .header-bg {
+        width: 92%;
+    }
+
+}
+
+@media(max-width: 1360px) {
+    .logo {
+        margin-right: 60px;
+    }
+
+    .menu {
+        margin-right: 40px;
+    }
+
+    .screen__content-group {
+        margin-top: 186px;
+    }
+
+    .screen__content-group img {
+        max-width: 600px;
     }
 }
 
