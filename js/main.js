@@ -47,6 +47,7 @@ let pageSlider = new Swiper('.page', {
         },
         slideChange: function () {
             menuSliderRemove();
+            activeSlide();
             menuLinks[pageSlider.realIndex].classList.add('_active');
         },
         resize: function () {
@@ -95,5 +96,16 @@ function setScrollType() {
         }
     }
 }
+function activeSlide(){
+    let slides = document.querySelectorAll('.screen');
+    let hBg = document.querySelector('.header-bg');
+    if(pageSlider.activeIndex > 0){
+        hBg.classList.add('header-bg');
+       
+    }
+    else{
+        hBg.classList.remove('header-bg');
+    }
 
+}
 pageSlider.init();

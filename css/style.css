@@ -939,7 +939,8 @@ a.services__card:nth-child(2)::before {
 .contacts__line {
     width: 100%;
     height: 3px;
-    background-color: #303F3D;
+    background-color: #8ba7a3;
+    border-radius: 3px;
 }
 
 .burger svg {
@@ -1015,6 +1016,7 @@ a.services__card:nth-child(2)::before {
         top: 40px;
         left: 107px;
     }
+
 }
 
 @media(max-width: 1650px) {
@@ -1140,6 +1142,10 @@ a.services__card:nth-child(2)::before {
 @media(max-width: 1280px) {
     .screen__content-group img {
         transform: none !important;
+    }
+
+    .schedule {
+        left: 2em;
     }
 }
 
@@ -1326,6 +1332,26 @@ a.services__card:nth-child(2)::before {
     .burger svg {
         display: block;
     }
+
+    .schedule-line {
+        display: none;
+    }
+
+    .schedule p {
+        color: #fff;
+        justify-content: unset;
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    .schedule p span {
+        margin-right: 20px;
+    }
+
+    .schedule h3 {
+        font-size: 42px;
+        margin-bottom: 22px;
+    }
 }
 
 @media(max-width: 760px) {
@@ -1489,5 +1515,22 @@ a.services__card:nth-child(2)::before {
 
     .services__card-text_forth {
         left: -66px;
+    }
+
+    .schedule {
+        max-width: unset;
+    }
+
+    .schedule {
+        left: 1em;
+    }
+
+    .schedule h3 {
+        font-size: 28px;
+    }
+
+    .schedule p {
+        font-size: 25px;
+        line-height: 30px;
     }
 }
