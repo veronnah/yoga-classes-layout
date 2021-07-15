@@ -955,6 +955,10 @@ a.services__card:nth-child(2)::before {
     .screen__content-group {
         margin-top: 80px;
     }
+
+    .screen__contact-group {
+        max-width: 1400px;
+    }
 }
 
 @media(max-width: 1760px) {
@@ -1017,6 +1021,23 @@ a.services__card:nth-child(2)::before {
         left: 107px;
     }
 
+    .screen__contact-group {
+        height: 60%;
+    }
+
+    .contacts__info {
+        max-width: 610px;
+    }
+
+    .contacts__info h3 {
+        font-size: 34px;
+    }
+
+    .contacts__info p {
+        align-items: baseline;
+        font-size: 34px;
+    }
+
 }
 
 @media(max-width: 1650px) {
@@ -1026,6 +1047,22 @@ a.services__card:nth-child(2)::before {
 
     .screen__content-group {
         margin-top: 120px;
+    }
+
+    .screen__contact-group {
+        max-width: 1255px;
+    }
+
+    .contacts__info {
+        max-width: unset;
+    }
+
+    .contacts__line {
+        display: none;
+    }
+
+    .contact__map {
+        width: 100%;
     }
 }
 
@@ -1146,6 +1183,22 @@ a.services__card:nth-child(2)::before {
 
     .schedule {
         left: 2em;
+    }
+
+    .screen__contact-group {
+        max-width: 1000px;
+    }
+
+    .contact__map h4 {
+        font-size: 36px;
+    }
+
+    .screen__contact-group {
+        height: 62%;
+    }
+
+    .contact__map img {
+        margin-top: 8em;
     }
 }
 
@@ -1299,6 +1352,54 @@ a.services__card:nth-child(2)::before {
         align-items: center;
         margin-right: 0;
     }
+
+    .contact-square__second {
+        transform: scale(1.5);
+    }
+
+    .contact-square__third {
+        right: 3em;
+    }
+
+    .screen__contact-group {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contacts__info {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-top: 3em;
+    }
+
+    .contact__map img {
+        margin-top: 1em;
+    }
+
+    .contacts__info h3 {
+        transform: unset !important;
+        color: #fff;
+    }
+
+    .contacts__info p {
+        color: #fff;
+    }
+
+    .contacts__info p span img {
+        display: none;
+    }
+
+    .contact__map h4 {
+        color: #fff;
+        opacity: .8;
+    }
+
+    .contact__map img {
+        transform: unset !important;
+    }
+
 }
 
 @media(max-width: 844px) {
@@ -1468,6 +1569,18 @@ a.services__card:nth-child(2)::before {
 
     .screen__text-group {
         padding: 0 10px;
+    }
+
+    .contacts__info p {
+        font-size: 22px;
+    }
+
+    .contacts__info p {
+        flex-direction: column;
+    }
+
+    .contact__map h4 {
+        font-size: 30px;
     }
 
 }
